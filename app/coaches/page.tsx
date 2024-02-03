@@ -9,42 +9,45 @@ import fitnessCoacher2 from '@/public/images/coaches-fitness-2.jpg'
 import fitnessCoacher3 from '@/public/images/coaches-fitness-3.jpg'
 import fitnessCoacher4 from '@/public/images/coaches-fitness-4.jpg'
 import fitnessCoacher5 from '@/public/images/coaches-fitness-5.jpg'
+import { PortraitType } from '@/components/portrait'
+import PageWithTitle from '@/components/pageWithTitle'
 
 
 const stretchers = [
-  {img: stretcher1, position: 'flex-flow specialist', fullname: 'Emma Williams'},
-  {img: stretcher2, position: 'Dynamic FlexFlow', fullname: 'alexa iva'},
-  {img: stretcher3, position: 'Stretch & Strength Fusion', fullname: 'Marcus Brown'},
-  {img: stretcher4, position: 'YogaFlex Harmony', fullname: 'Priya yun '},
+  { img: stretcher1, position: 'flex-flow specialist', fullname: 'Emma Williams' },
+  { img: stretcher2, position: 'Dynamic FlexFlow', fullname: 'alexa iva' },
+  { img: stretcher3, position: 'Stretch & Strength Fusion', fullname: 'Marcus Brown' },
+  { img: stretcher4, position: 'YogaFlex Harmony', fullname: 'Priya yun ' },
 ]
 
-const fitnessCoachers = [ 
-  {img: fitnessCoacher1, position: 'Strength and Conditioning', fullname: 'Sarah Johnson'},
-  {img: fitnessCoacher2, position: 'FlexCore Power', fullname: 'Mia Lex'},
-  {img: fitnessCoacher3, position: 'Cardio Blaze Circuit', fullname: 'Maria johnson'},
-  {img: fitnessCoacher4, position: 'HIIT Fusion Ignite', fullname: 'liam snow '},
-  {img: fitnessCoacher5, position: 'Mindful Movement Flow', fullname: 'Simon lewis'},
+const fitnessCoaches = [
+  { img: fitnessCoacher1, position: 'Strength and Conditioning', fullname: 'Sarah Johnson' },
+  { img: fitnessCoacher2, position: 'FlexCore Power', fullname: 'Mia Lex' },
+  { img: fitnessCoacher3, position: 'Cardio Blaze Circuit', fullname: 'Maria johnson' },
+  { img: fitnessCoacher4, position: 'HIIT Fusion Ignite', fullname: 'liam snow ' },
+  { img: fitnessCoacher5, position: 'Mindful Movement Flow', fullname: 'Simon lewis' },
 ]
 
 const Coaches = () => {
   return (
-    <main className='min-h-[100vh]'>
-      <h1 className='text-black font-[800] text-[70px] text-center pt-[80px] pb-[56px]'>COACHES</h1>
-      <section className='bg-white mb-[24px]'>
-        <div className='w-[960px] mx-auto pb-[31px]'>
-          <h3 className='text-[48px] font-[700] mb-[40px]'>STRETCHING</h3>
-          <PortraitsCollection portraits={stretchers}/>
-        </div>
-      </section>
+    <PageWithTitle title='coaches'>
+      <CoachesSection title='stretching' coaches={stretchers} />
+      <CoachesSection title='fitness' coaches={fitnessCoaches} />
+    </PageWithTitle>
 
-      <section className='bg-white mb-[24px]'>
-        <div className='w-[960px] mx-auto pb-[31px] '>
-          <h3 className='text-[48px] font-[700] mb-[40px]'>STRETCHING</h3>
-          <PortraitsCollection portraits={fitnessCoachers}/>
-        </div>
-      </section>
-    </main>
   )
 }
+
+const CoachesSection = (
+  { title, coaches }: 
+  { title: string, coaches: Array<PortraitType> 
+  }) => (
+  <section className='bg-white mb-[24px]'>
+    <div className='w-[960px] mx-auto pb-[31px] '>
+      <h3 className='text-[48px] font-[700] mb-[40px] uppercase'>{title}</h3>
+      <PortraitsCollection portraits={coaches} />
+    </div>
+  </section>
+)
 
 export default Coaches

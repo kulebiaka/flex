@@ -1,19 +1,15 @@
 import React from 'react'
-import Portrait from './portrait'
+import Portrait, { PortraitType } from './portrait'
 import { StaticImageData } from 'next/image'
 
-type portraitType = {
-  img : StaticImageData,
-  position: string,
-  fullname: string
-}
+
 
 const PortraitsCollection = (
-  { portraits } : { portraits: Array<portraitType>}
+  { portraits } : { portraits: Array<PortraitType>}
   ) => {
   return (<div className='max-w-[960px] mx-[auto] '>
     <div className='flex flex-wrap gap-[40px_147px]'>
-    {portraits.map((p) => (<Portrait position={p.position} fullname={p.fullname} img={p.img}/>))}
+    {portraits.map((p) => (<Portrait key={p.fullname} position={p.position} fullname={p.fullname} img={p.img}/>))}
     </div>
   </div>)
 }

@@ -5,6 +5,7 @@ import stretcher2 from '@/public/images/coaches-stretchers-2.jpg'
 import stretcher3 from '@/public/images/coaches-stretchers-3.jpg'
 import stretcher4 from '@/public/images/coaches-stretchers-1.jpg'
 import Program from '@/components/program'
+import PageWithTitle from '@/components/pageWithTitle'
 
 
 const programs = [
@@ -18,12 +19,13 @@ const programs = [
 
 const Programs = () => {
   return (
-    <main className='bg-white pb-[145px]'>
-      <h1 className='text-black font-[800] text-[70px] text-center pt-[80px] pb-[56px]'>PROGRAMS</h1>
+    <PageWithTitle title='programs' bgColor='white'>
       <div className='w-[983px] mx-auto flex flex-wrap gap-[50px_20px]'>
-        {programs.map(({tittle, img, sessions, focusAreas}) => (<Program tittle={tittle} img={img} sessions={sessions} focusAreas={focusAreas}/>))}
+        {programs.map(
+          ({tittle, img, sessions, focusAreas}) => 
+          (<Program tittle={tittle} img={img} sessions={sessions} focusAreas={focusAreas}/>))}
       </div>
-    </main>
+    </PageWithTitle>
   )
 }
 

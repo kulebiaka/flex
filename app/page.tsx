@@ -2,12 +2,17 @@
 import FintessSVG from '@/components/fintessSVG'
 import FlexLogoBig from '@/components/logo424_114'
 import StretchingSVG from '@/components/stretchingSVG'
+import useWindowWidth from '@/hooks/useWindowWidth'
+import Membership from './membership/page'
 import Image from 'next/image'
 import Link from 'next/link'
-// import home1 from '@/public/images/home.jpg'
-// import home2 from '@/public/images/home2.jpg'
-// import home3 from '@/public/images/home3.jpg'
+import home1 from '@/public/images/home.jpg'
+import home2 from '@/public/images/home2.jpg'
+import home3 from '@/public/images/home3.jpg'
+import mobileHome1 from '@/public/images/mobile-home1.jpg'
+
 import { useState } from 'react'
+import Programs from './programs/page'
 
 const images = []
 
@@ -19,12 +24,11 @@ function Home() {
   const [stylesGallery2, setStylesGallery2] = useState<string>('gallery3')
 
 
-  let [isListing, setIsListing] = useState<boolean>(false)
-
+  const [isListing, setIsListing] = useState<boolean>(false)
+  const windowWidth = useWindowWidth()
 
   function setNextImg(e: any) {
     e.preventDefault()
-    debugger
 
     console.log('setNextImg')
     if (currentImg === 2) {
@@ -46,6 +50,28 @@ function Home() {
       setTimeout(() => setStylesGallery1('gallery3'), 400)
       setCurrentImg(prev => 2)
     }
+  }
+
+  if(windowWidth < 500){
+    return(
+      <main>
+        <section className=''>
+          <Image className=' overflow-hidden' src={mobileHome1} alt='Picture with smailing pair'/>
+          <Link href='/stretching'>
+            <Image className=' overflow-hidden' src={home2} alt='Picture with smailing pair'/>
+          </Link>
+          <Link href='/fitness'>
+            <Image className=' overflow-hidden' src={home3} alt='Picture with smailing pair'/>
+          </Link>
+        </section>
+        <section>
+          <Membership />
+        </section>
+        <section>
+          <Programs />
+        </section>
+      </main>
+    )
   }
 
   return (
@@ -87,6 +113,11 @@ function Home() {
                 setTimeout(() => {setIsListing(false)},600)
               }}></button>
           </div>
+          {/* <div className='relative'>
+            <div className='w-[52px] h-[5px] border-[1px] border-[white] bg-white rounded-[2.5px] relative'></div>
+            <div className='w-[52px] h-[5px] border-[1px] border-[white] bg-white rounded-[2.5px] relative'></div>
+            <div className='w-[52px] h-[5px] border-[1px] border-[white] bg-white rounded-[2.5px] relative'></div>
+          </div> */}
         </div>
       </section>
     </main>

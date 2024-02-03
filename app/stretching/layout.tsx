@@ -37,7 +37,7 @@ const Stretching = ({children} : any) => {
         <div>
 
           <div>
-
+          {children}
           </div>
 
           <div>
@@ -45,7 +45,6 @@ const Stretching = ({children} : any) => {
 
           <button className='w-[233px] h-[58px] bg-lime-300 bg-opacity-70 rounded-[60px] font-semibold text-[20px] uppercase'>BOOK NOW</button>
         </div>
-        {children}
       </section>
     </main>
   )

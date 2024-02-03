@@ -21,17 +21,6 @@ body {
   width: 75%;
 }
 
-/* @keyframes galleryFirstAnimation{
-  0%{
-    left: 0
-  }
-  100%{
-    position: absolute;
-    z-index: 0;
-    left: -75%;
-    top: 0;
-  }
-} */
 
 .gallery1{
   position: absolute;

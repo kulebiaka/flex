@@ -2,12 +2,12 @@ import React from 'react'
 import contctsAlice from '@/public/images/contscts-alice.jpg'
 import Image from 'next/image'
 import FlexLogoBig from '@/components/logo424_114'
+import PageWithTitle from '@/components/pageWithTitle'
 
 
 const Contacts = () => {
   return (
-    <main className='min-h-[100vh]'>
-      <h1 className='text-black font-[800] text-[70px] text-center pt-[80px] pb-[56px] uppercase'>CONTACTS</h1>
+    <PageWithTitle title='contacts'>
       <section className='w-[900px] mx-auto flex justify-between items-center'>
         <div className='w-[468px]'>
           <div className=' flex justify-between rounded-[20px] overflow-hidden'>
@@ -49,15 +49,15 @@ const Contacts = () => {
       <section className='w-full my-[40px]'>
         <div className='w-[424px] mx-auto'>
           <h2 className=' text-[#0D0D0D] text-[25.588px]'>STRETCHING AND FITNESS STUDIO</h2>
-          <FlexLogoBig color='#0D0D0D'/>
+          <FlexLogoBig color='#0D0D0D' />
         </div>
       </section>
 
       <section className='w-full my-[30px]'>
         <Image src={'/images/contacts-map.jpg'} alt='' width={1297} height={537} className='w-full' />
       </section>
+    </PageWithTitle>
 
-    </main>
   )
 }
 
