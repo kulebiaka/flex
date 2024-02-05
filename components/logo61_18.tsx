@@ -17,7 +17,7 @@ const FlexLogo = ({
       viewBox="0 0 61 18"
       fill="none"
     >
-      <g clip-path="url(#clip0_36_150)">
+      <g clipPath="url(#clip0_36_150)">
         <path
           d="M3.70653 4.27791V7.70828H10.1109V11.1866H3.70653V17.5916H0V0.799561H10.5331V4.27791H3.70653Z"
           fill={color}

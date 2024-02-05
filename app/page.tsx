@@ -89,12 +89,12 @@ function Home() {
   return (
     <main className="bg-[#0e0e0e]">
       <section className="flex">
-        <div className="overflow-hidden max-h-[100vh]">
+        <div className="max-h-[100vh] overflow-hidden">
           <div className="w-full">
             <div id="home0" className={`home-gallery ${stylesGallery0}`}>
               <img src={"images/home.jpg"} alt="" />
-              <div className="absolute top-[45%] leading-[100%] z-30 pl-[30px]">
-                <h2 className=" text-[#0d0d0d] text-[25.588px] mb-[13px]">
+              <div className="absolute top-[45%] z-30 pl-[30px] leading-[100%]">
+                <h2 className=" mb-[13px] text-[25.588px] text-[#0d0d0d]">
                   STRETCHING AND FITNESS STUDIO
                 </h2>
                 <FlexLogoBig color="#0d0d0d" />
@@ -102,29 +102,29 @@ function Home() {
             </div>
             <div id="home1" className={`home-gallery ${stylesGallery1}`}>
               <img src={"images/home2.jpg"} alt="" />
-              <div className="absolute top-[50%] z-30 px-[30px] w-full">
+              <div className="absolute top-[50%] z-30 w-full px-[30px]">
                 <StretchingSVG />
               </div>
               <div className="absolute bottom-[10%] w-full text-center">
-                <button className="w-[233px] h-[58px] bg-lime-300 bg-opacity-70 rounded-[60px] font-semibold text-[20px] uppercase">
+                <button className="h-[58px] w-[233px] rounded-[60px] bg-lime-300 bg-opacity-70 text-[20px] font-semibold uppercase">
                   <Link href="/stretching">More details</Link>
                 </button>
               </div>
             </div>
             <div id="home2" className={`home-gallery ${stylesGallery2}`}>
               <img src={"images/home3.jpg"} alt="" />
-              <div className="absolute top-[50%] z-30 px-[30px] w-full">
+              <div className="absolute top-[50%] z-30 w-full px-[30px]">
                 <FintessSVG />
               </div>
               <div className="absolute bottom-[10%] w-full text-center">
-                <button className="w-[233px] h-[58px] bg-[#0D0D0D] bg-opacity-70 text-white rounded-[60px] font-semibold text-[20px] uppercase">
+                <button className="h-[58px] w-[233px] rounded-[60px] bg-[#0D0D0D] bg-opacity-70 text-[20px] font-semibold uppercase text-white">
                   <Link href="/fitness">More details</Link>
                 </button>
               </div>
             </div>
             <button
-              className="absolute h-[100%] w-[25%] top-0 right-0 z-40
-            sshadow-[inset_-130px_0px_185px_black]
+              className="sshadow-[inset_-130px_0px_185px_black] absolute right-0 top-0 z-40 h-[100%]
+            w-[25%]
             bg-[linear-gradient(270deg,_#000000a1_14%,_rgba(0,_0,_0,_0)_74%)]"
               disabled={isListing}
               onClick={(e) => {

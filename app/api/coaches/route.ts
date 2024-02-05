@@ -8,7 +8,7 @@ import fitnessCoacher3 from "@/public/images/coaches-fitness-3.jpg";
 import fitnessCoacher4 from "@/public/images/coaches-fitness-4.jpg";
 import fitnessCoacher5 from "@/public/images/coaches-fitness-5.jpg";
 
-export const stretchers = [
+export const stretchers: any = [
   {
     img: stretcher1,
     position: "flex-flow specialist",
@@ -23,7 +23,7 @@ export const stretchers = [
   { img: stretcher4, position: "YogaFlex Harmony", fullname: "Priya yun " },
 ];
 
-export const fitnessCoaches = [
+export const fitnessCoaches : any = [
   {
     img: fitnessCoacher1,
     position: "Strength and Conditioning",

@@ -21,30 +21,19 @@ const Header = () => {
   const pathname = usePathname();
   const [theme, setTheme] = useState<"white" | "black">("white");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [scroll, setScroll] = useState(0)
-  const [classList, setClassList] = useState('absolute xs:pt-[56px]')
-  const ignoreScroll = useRef(false)
+  const [classList, setClassList] = useState("absolute xs:pt-[56px]");
 
   const handleScroll = () => {
-    // if (ignoreScroll.current) {
-    //   return
-    // }
-    // setScroll(window.scrollY)
-    // ignoreScroll.current = true
-    console.log(scrollY)
-
     if (scrollY > 20) {
-      setClassList(`fixed xs:pt-9 bg-${theme === 'black' ? 'white' : 'black'}`)
+      setClassList(`fixed xs:pt-8 bg-${theme === "black" ? "white" : "black"}`);
     } else {
-      setClassList('absolute xs:pt-[56px]')
+      setClassList("absolute xs:pt-[56px]");
     }
-
-    // setTimeout(() => ignoreScroll.current = false, 100)
-  }
+  };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   });
 
   useEffect(() => {
@@ -58,8 +47,9 @@ const Header = () => {
   return (
     <>
       <header
-        className={`${classList} py-[20px] w-full pl-[30px] pr-[38px] items-center z-[101] xs:pt-[56px]`}>
-        <div className="items-center flex md:justify-between">
+        className={`${classList} z-[101] w-full items-center py-[20px] pl-[30px] pr-[38px] xs:pt-[56px]`}
+      >
+        <div className="flex items-center md:justify-between">
           <div>
             <Link href="/">
               <FlexLogo color={theme} />
@@ -68,11 +58,12 @@ const Header = () => {
 
           <nav className="w-[calc(100%-130px)] transition-all md:hidden">
             <ul
-              className={`flex justify-end space-x-3 mr-[57px] text-${theme} font-semibold`}
+              className={`mr-[57px] flex justify-end space-x-3 text-${theme} font-semibold`}
             >
               {links.map((l) => (
                 <li
-                  className={`px-3 py-2 leading-[100%] uppercase ${pathname === l.to ? "active-nav" : ""}`}
+                  key={l.to}
+                  className={`px-3 py-2 uppercase leading-[100%] ${pathname === l.to ? "active-nav" : ""}`}
                 >
                   <Link href={l.to}>{l.title}</Link>
                 </li>
@@ -80,30 +71,33 @@ const Header = () => {
             </ul>
           </nav>
 
-          <div className="w-[71.54px] h-[34px] relative md:hidden">
-            <div className="w-[34px] h-[34px] left-0 top-0 absolute">
-              <div className="w-[34px] h-[34px] left-0 top-0 absolute bg-stone-950 rounded-full" />
-              <div className="w-[19.12px] h-[19.12px] left-[7.79px] top-[7.08px] absolute text-white text-sm font-normal uppercase">
+          <div className="relative h-[34px] w-[71.54px] md:hidden">
+            <div className="absolute left-0 top-0 h-[34px] w-[34px]">
+              <div className="absolute left-0 top-0 h-[34px] w-[34px] rounded-full bg-stone-950" />
+              <div className="absolute left-[7.79px] top-[7.08px] h-[19.12px] w-[19.12px] text-sm font-normal uppercase text-white">
                 En
               </div>
             </div>
-            <div className="w-[34px] h-[34px] left-[37.54px] top-0 absolute">
-              <div className="w-[34px] h-[34px] left-0 top-0 absolute bg-white rounded-full" />
-              <div className="w-[19.12px] h-[19.12px] left-[7.79px] top-[7.08px] absolute text-stone-950 text-sm font-normal uppercase">
+            <div className="absolute left-[37.54px] top-0 h-[34px] w-[34px]">
+              <div className="absolute left-0 top-0 h-[34px] w-[34px] rounded-full bg-white" />
+              <div className="absolute left-[7.79px] top-[7.08px] h-[19.12px] w-[19.12px] text-sm font-normal uppercase text-stone-950">
                 Ru
               </div>
             </div>
           </div>
 
           <div className="hidden md:block">
-            <Burger theme={theme} onClick={() => setIsMobileMenuOpen((prev) => !prev)} />
+            <Burger
+              theme={theme}
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+            />
           </div>
         </div>
       </header>
 
       <MobileMenu
         isOpen={isMobileMenuOpen}
-        closeMenu={() => setIsMobileMenuOpen(false)} //FIXME: throwing function in props provoke unnecessary rerenders
+        closeMenu={() => setIsMobileMenuOpen(false)}
       />
     </>
   );

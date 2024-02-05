@@ -3,7 +3,7 @@ import React from "react";
 const Burger = ({ onClick, theme }: any) => {
   return (
     <button
-      className="h-[13px] flex flex-col items-end justify-between"
+      className="flex h-[13px] flex-col items-end justify-between"
       onClick={onClick}
     >
       <BurgerLine theme={theme} width={"17px"} />
@@ -13,7 +13,7 @@ const Burger = ({ onClick, theme }: any) => {
   );
 };
 
-const BurgerLine = ({ width, theme }: { width: string, theme: string }) => (
+const BurgerLine = ({ width, theme }: { width: string; theme: string }) => (
   <div
     style={{ width, height: "3px", borderRadius: "5px", background: theme }}
   ></div>

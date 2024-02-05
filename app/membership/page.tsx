@@ -8,7 +8,7 @@ import PageTemplate from "@/components/PageTemplate";
 const Membership = () => {
   return (
     <PageTemplate title="membership" bgColor="white">
-      <section className="mx-auto max-w-[990px] flex justify-between md:flex-wrap md:justify-around">
+      <section className="mx-auto flex max-w-[990px] justify-between md:flex-wrap md:justify-around">
         <MembershipItem
           img={membershipFlexibility}
           tittle="flexibility"
@@ -44,7 +44,7 @@ const Membership = () => {
           price={185}
         />
       </section>
-      <p className="p-[54px_0px_66px] text-center text-[16px] xs:text-[12px] xs:pt-3">
+      <p className="p-[54px_0px_66px] text-center text-[16px] xs:pt-3 xs:text-[12px]">
         Note *Collect your phisical membership card in the reception zone*
       </p>
     </PageTemplate>

@@ -67,9 +67,9 @@ const CoachesSection = ({
   title: string;
   coaches: Array<PortraitType>;
 }) => (
-  <section className="bg-white mb-[24px] w-full">
-    <div className="w-[960px] mx-auto pb-[31px] md:max-w-[581px] xs:max-w-[345px]">
-      <h3 className="text-[48px] font-[700] mb-[40px] uppercase">{title}</h3>
+  <section className="mb-[24px] w-full bg-white">
+    <div className="mx-auto w-[960px] pb-[31px] md:max-w-[581px] xs:max-w-[345px]">
+      <h3 className="mb-[40px] text-[48px] font-[700] uppercase">{title}</h3>
       <PortraitsCollection portraits={coaches} />
     </div>
   </section>

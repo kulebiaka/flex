@@ -7,19 +7,19 @@ const Stretching = ({ children }: any) => {
     <main>
       <section
         style={{ backgroundImage: "url(/images/home2.jpg)" }}
-        className="min-h-[100vh] w-full bg-no-repeat bg-cover bg-center"
+        className="min-h-[100vh] w-full bg-cover bg-center bg-no-repeat"
       >
         <div
           style={{
             background:
               "linear-gradient(345deg, rgba(0, 0, 0, 0.00) 0.18%, rgba(0, 0, 0, 0.62) 53.86%, rgba(0, 0, 0, 0.00) 102.22%)",
           }}
-          className="w-full min-h-[100vh]"
+          className="min-h-[100vh] w-full"
         >
-          <div className="w-full pt-[100px] flex justify-center">
+          <div className="flex w-full justify-center pt-[100px]">
             <StretchingSVG />
           </div>
-          <div className="w-[900px] mx-auto mt-28 text-white ">
+          <div className="mx-auto mt-28 w-[900px] text-white ">
             <div>
               <h2 className="text-[26px] leading-[180%]">
                 Welcome to Flex Studio
@@ -27,14 +27,14 @@ const Stretching = ({ children }: any) => {
               <p className="text-xl">
                 In stretching we offer five tailored stretching programs
                 suitable for all experience levels and conditions. Whether
-                you're a fitness enthusiast or a beginner, our certified coaches
+                you`re a fitness enthusiast or a beginner, our certified coaches
                 ensure you find the perfect program to enhance flexibility and
                 joint mobility. <br />
                 Join us in the pursuit of personalized wellness at Flex Studio.
               </p>
             </div>
-            <h2 className="text-[26px] leading-[180%] mt-[60px]">Benefits:</h2>
-            <div className="flex space-x-[60px] mt-4 text-[16px]">
+            <h2 className="mt-[60px] text-[26px] leading-[180%]">Benefits:</h2>
+            <div className="mt-4 flex space-x-[60px] text-[16px]">
               <div>
                 <h3 className="text-[18px] font-[600]">
                   Injury Prevention and Recovery:{" "}
@@ -67,13 +67,13 @@ const Stretching = ({ children }: any) => {
           </div>
         </div>
       </section>
-      <section className="bg-[#E6E3E3] min-h-[100vh]">
+      <section className="min-h-[100vh] bg-[#E6E3E3]">
         <div>
           <div>{children}</div>
 
           <div></div>
 
-          <button className="w-[233px] h-[58px] bg-lime-300 bg-opacity-70 rounded-[60px] font-semibold text-[20px] uppercase">
+          <button className="h-[58px] w-[233px] rounded-[60px] bg-lime-300 bg-opacity-70 text-[20px] font-semibold uppercase">
             BOOK NOW
           </button>
         </div>

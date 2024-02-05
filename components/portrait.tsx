@@ -8,16 +8,18 @@ export interface PortraitType {
 }
 
 const Portrait = ({ img, fullname, position }: PortraitType) => (
-  <div className="text-center w-[222px] xs:w-[132px]" key={fullname}>
+  <div className="w-[222px] text-center xs:w-[132px]" key={fullname}>
     {img ? (
       <>
         <div className="">
           <Image src={img} alt="" />
         </div>
-        <p className="text-[18px] uppercase mt-[5px] leading-[20px] xs:text-[12px]">
+        <p className="mt-[5px] text-[18px] uppercase leading-[20px] xs:text-[12px]">
           {position}
         </p>
-        <h4 className="text-[22px] font-bold uppercase xs:text-[12px]">{fullname}</h4>
+        <h4 className="text-[22px] font-bold uppercase xs:text-[12px]">
+          {fullname}
+        </h4>
       </>
     ) : (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">

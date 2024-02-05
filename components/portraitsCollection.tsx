@@ -8,8 +8,7 @@ const PortraitsCollection = ({
   portraits: Array<PortraitType>;
 }) => {
   return (
-    <div className="max-w-[960px] mx-auto">
-
+    <div className="mx-auto max-w-[960px]">
       <div className="flex flex-wrap gap-[40px_147px] md:justify-between md:gap-0 ">
         {portraits.map((p) => (
           <Portrait

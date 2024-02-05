@@ -7,14 +7,16 @@ import PageTemplate from "@/components/PageTemplate";
 const Contacts = () => {
   return (
     <PageTemplate title="contacts">
-      <section className="max-w-[900px] mx-auto flex justify-between items-center xs:w-[340px] md:flex-wrap md:px-10 sm:p-0 sm:block sm:w-[468px]">
+      <section className="mx-auto flex max-w-[900px] items-center justify-between md:flex-wrap md:px-10 sm:block sm:w-[468px] sm:p-0 xs:w-[340px]">
         <div className="w-[468px] xs:w-full ">
-          <div className="flex justify-between rounded-[20px] overflow-hidden">
+          <div className="flex justify-between overflow-hidden rounded-[20px]">
             <div className="xs:w-[100px]">
               <Image src={contctsAlice} alt="" />
             </div>
-            <div className="w-[324px] bg-white p-[12px_17px] xs:w-[235px] xs:p-[8px_12px] xs:hover-[75px]">
-              <h2 className="font-[700] text-[20px] xs:text-[14px]">Hello, Im Alice</h2>
+            <div className="xs:hover-[75px] w-[324px] bg-white p-[12px_17px] xs:w-[235px] xs:p-[8px_12px]">
+              <h2 className="text-[20px] font-[700] xs:text-[14px]">
+                Hello, Im Alice
+              </h2>
               <p className="xs:text-[12px]">
                 If you have a problem or question, <br /> feel free to get in
                 touch.
@@ -22,30 +24,30 @@ const Contacts = () => {
             </div>
           </div>
           <div>
-            <div className="p-[22px_35px] bg-white mt-[16px] rounded-[20px] xs:p-[16px_25px]">
+            <div className="mt-[16px] rounded-[20px] bg-white p-[22px_35px] xs:p-[16px_25px]">
               <form action="">
                 <input
                   type="text"
                   placeholder="Phone number"
-                  className="bg-[#D9D9D9] w-[254px] mb-[12px] p-[6px] xs:w-[186px]"
+                  className="mb-[12px] w-[254px] bg-[#D9D9D9] p-[6px] xs:w-[186px]"
                 />
                 <input
                   type="text"
                   placeholder="Name"
-                  className="bg-[#D9D9D9] w-[130px] ml-[14px] p-[6px] xs:w-[94px] xs:ml-[10px]"
+                  className="ml-[14px] w-[130px] bg-[#D9D9D9] p-[6px] xs:ml-[10px] xs:w-[94px]"
                 />
                 <input
                   type="text"
                   placeholder="Email"
-                  className="bg-[#D9D9D9] w-full mb-[11px] p-[6px]"
+                  className="mb-[11px] w-full bg-[#D9D9D9] p-[6px]"
                 />
                 <textarea
                   placeholder="Please, describe your problem or questions as many detailed as you can. Confidential 100% "
-                  className="bg-[#D9D9D9] w-full p-[6px]"
+                  className="w-full bg-[#D9D9D9] p-[6px]"
                 />
                 <button
                   disabled={true}
-                  className="w-full mt-[12px] bg-[#D9D9D9] p-[6px]"
+                  className="mt-[12px] w-full bg-[#D9D9D9] p-[6px]"
                 >
                   Send
                 </button>
@@ -54,10 +56,10 @@ const Contacts = () => {
           </div>
         </div>
 
-        <div className="text-[20px] sm:mt-[35px] sm:flex sm:justify-between sm:items-center xs:block">
+        <div className="text-[20px] sm:mt-[35px] sm:flex sm:items-center sm:justify-between xs:block">
           <div>
             <h3 className="font-semibold">Our contacts</h3>
-            <div className="flex items-center mt-[15px]">
+            <div className="mt-[15px] flex items-center">
               <span>
                 <Image
                   src={"/images/contacts-phone.png"}
@@ -74,7 +76,7 @@ const Contacts = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-[15px]">Follow us</h3>
+            <h3 className="mb-[15px] font-semibold">Follow us</h3>
             <div className="flex space-x-[30px]">
               <a href="#">
                 <Image
@@ -105,16 +107,16 @@ const Contacts = () => {
         </div>
       </section>
 
-      <section className="w-full my-[40px] md:hidden">
-        <div className="w-[424px] mx-auto">
-          <h2 className=" text-[#0D0D0D] text-[25.588px]">
+      <section className="my-[40px] w-full md:hidden">
+        <div className="mx-auto w-[424px]">
+          <h2 className=" text-[25.588px] text-[#0D0D0D]">
             STRETCHING AND FITNESS STUDIO
           </h2>
           <FlexLogoBig color="#0D0D0D" />
         </div>
       </section>
 
-      <section className="w-full my-[30px]">
+      <section className="my-[30px] w-full">
         <Image
           src={"/images/contacts-map.jpg"}
           alt=""

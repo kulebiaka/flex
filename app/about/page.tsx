@@ -4,7 +4,7 @@ import FlexLogoBig from "@/components/logo424_114";
 import about1 from "@/public/images/about-1.png";
 import about2 from "@/public/images/about-2.png";
 import about3 from "@/public/images/about-3.jpg";
-import mobileAbout from "@/public/images/mobile-about-1.jpg"
+import mobileAbout from "@/public/images/mobile-about-1.jpg";
 import freshMeals from "@/public/icons/fresh-food-1.png";
 import partnersGymshark from "@/public/icons/partners-gymshark.svg";
 import partnersMuscletech from "@/public/icons/partners-muscletech.svg";
@@ -16,7 +16,6 @@ import t3 from "@/public/images/team3.jpg";
 import t4 from "@/public/images/team4.jpg";
 import t5 from "@/public/images/team5.jpg";
 import t6 from "@/public/images/team6.jpg";
-
 
 const portraits = [
   { img: t1, fullname: "Anna Morison", position: "Founder/CEO" },
@@ -38,70 +37,81 @@ const About = () => {
         style={{
           backgroundImage: `url(images/person-looking-futuristic-mystical-other-worldly-sky-1.png`,
         }}
-        className="bg-no-repeat bg-cover bg-center w-full h-[50vw] xs:hidden"
+        className="h-[50vw] w-full bg-cover bg-center bg-no-repeat xs:hidden"
       >
         <div
           style={{ boxShadow: "inset black 0px -10px 100px" }}
-          className="flex items-center pl-[30px] h-full w-full"
+          className="flex h-full w-full items-center pl-[30px]"
         >
           <div className="sm:hidden">
-            <h2 className="text-white text-[25.588px]">
+            <h2 className="text-[25.588px] text-white">
               STRETCHING AND FITNESS STUDIO
             </h2>
             <FlexLogoBig color="white" />
           </div>
         </div>
-      </section >
+      </section>
 
-      <section
-        className="hidden xs:block ">
+      <section className="hidden xs:block ">
         <Image src={mobileAbout} alt="" />
       </section>
 
-      <section className="h-[300px] bg-black text-white px-[calc((100%-968px)/2)] md:h-[220px] xs:px-[calc((100%-313px)/2)] xs:h-[120px]">
-        <div className="w-[968px] mx-auto h-60 relative text-[64px] text-white md:w-[calc(100%-40px)] md:text-[48px] xs:w-[313px] xs:h-[120px] xs:text-[24px]">
-          <h1 className="w-full font-extrabold font-['Open Sans'] uppercase">
+      <section className="h-[300px] bg-black px-[calc((100%-968px)/2)] text-white md:h-[220px] xs:h-[120px] xs:px-[calc((100%-313px)/2)]">
+        <div className="relative mx-auto h-60 w-[968px] text-[64px] text-white md:w-[calc(100%-40px)] md:text-[48px] xs:h-[120px] xs:w-[313px] xs:text-[24px]">
+          <h1 className="font-['Open Sans'] w-full font-extrabold uppercase">
             Bend
           </h1>
           <div className="w-full">
-            <h1 className="w-[550px] mx-auto h-full font-extrabold font-['Open Sans'] uppercase md:w-[450px] xs:w-[200px]">
+            <h1 className="font-['Open Sans'] mx-auto h-full w-[550px] font-extrabold uppercase md:w-[450px] xs:w-[200px]">
               Breathe
             </h1>
           </div>
-          <h1 className="w-full text-end absolute font-extrabold font-['Open Sans'] uppercase xs:h-[32px]">
+          <h1 className="font-['Open Sans'] absolute w-full text-end font-extrabold uppercase xs:h-[32px]">
             Break Limits
           </h1>
         </div>
       </section>
 
-      <section className="py-[80px] max-w-[1280px] mx-auto md:max-w-[90%] xs:py-5">
-        <div className="flex flex-row-reverse justify-between mb-[110px] pr-3 xs:flex-wrap xs:mb-7">
+      <section className="mx-auto max-w-[1280px] py-[80px] md:max-w-[90%] xs:py-5">
+        <div className="mb-[110px] flex flex-row-reverse justify-between pr-3 xs:mb-7 xs:flex-wrap">
           <div className="max-w-[50%] xs:max-w-full">
             <Image src={about1} alt="" />
-            <h2 className="hidden xs:block relative bottom-[12%] left-[5%] text-white text-[18px]">FLEX PHILOSOPHY</h2>
+            <h2 className="relative bottom-[12%] left-[5%] hidden text-[18px] text-white xs:block">
+              FLEX PHILOSOPHY
+            </h2>
           </div>
-          <div className="w-[450px] mx-auto px-3">
-            <h2 className="text-[36px] mb-[21px] sm:text-[18px] xs:hidden">FLEX PHILOSOPHY</h2>
+          <div className="mx-auto w-[450px] px-3">
+            <h2 className="mb-[21px] text-[36px] sm:text-[18px] xs:hidden">
+              FLEX PHILOSOPHY
+            </h2>
             <p className="text-[20px] sm:text-[14px] xs:hidden ">
               We breathe life into the philosophy that flexibility is not just a
-              physical attribute; it's a state of mind. We believe in the power
+              physical attribute; it`s a state of mind. We believe in the power
               of flexibility to transform not only the body but also the spirit.
               Our philosophy centers on the idea that embracing flexibility,
-              both in body and mind, is the key to unlocking one's true
+              both in body and mind, is the key to unlocking on`s true
               potential.
             </p>
-            <p className="hidden xs:block text-[14px] mt-[-20px]"> {/*Text only for Mobile*/}
-              We breathe life into the philosophy that flexibility is not just a physical attribute; it's a state of mind. We believe in the power of flexibility to transform not only the body but also the spirit.
+            <p className="mt-[-20px] hidden text-[14px] xs:block">
+              {" "}
+              {/*Text only for Mobile*/}
+              We breathe life into the philosophy that flexibility is not just a
+              physical attribute; it`s a state of mind. We believe in the power
+              of flexibility to transform not only the body but also the spirit.
             </p>
           </div>
         </div>
-        <div className="flex justify-between mb-[110px] pr-3 xs:flex-wrap xs:mb-7">
+        <div className="mb-[110px] flex justify-between pr-3 xs:mb-7 xs:flex-wrap">
           <div className="max-w-[50%] xs:max-w-full">
             <Image src={about2} alt="" />
-            <h2 className="hidden xs:block relative bottom-[12%] left-[5%] text-white text-[18px] ">OUR MISSION</h2>
+            <h2 className="relative bottom-[12%] left-[5%] hidden text-[18px] text-white xs:block ">
+              OUR MISSION
+            </h2>
           </div>
-          <div className="w-[450px] mx-auto px-3">
-            <h2 className="text-[36px] mb-[21px] sm:text-[18px] xs:hidden">OUR MISSION</h2>
+          <div className="mx-auto w-[450px] px-3">
+            <h2 className="mb-[21px] text-[36px] sm:text-[18px] xs:hidden">
+              OUR MISSION
+            </h2>
             <p className="text-[20px] sm:text-[14px] xs:hidden">
               Is to inspire and guide individuals on their unique wellness
               journeys. We are dedicated to providing a diverse range of
@@ -111,19 +121,28 @@ const About = () => {
               the joy of movement, achieve their fitness goals, and lead a life
               filled with vitality.
             </p>
-            <p className="hidden xs:block text-[14px] mt-[-20px]">
-              Is to inspire and guide individuals on their unique wellness journeys. We are dedicated to providing a diverse range of programs that seamlessly blend stretching and fitness, offering a holistic approach to health.
-              Through personalized guidance and innovative classes, we aim to empower our community to discover the joy of movement, achieve their fitness goals, and lead a life filled with vitality.
+            <p className="mt-[-20px] hidden text-[14px] xs:block">
+              Is to inspire and guide individuals on their unique wellness
+              journeys. We are dedicated to providing a diverse range of
+              programs that seamlessly blend stretching and fitness, offering a
+              holistic approach to health. Through personalized guidance and
+              innovative classes, we aim to empower our community to discover
+              the joy of movement, achieve their fitness goals, and lead a life
+              filled with vitality.
             </p>
           </div>
         </div>
-        <div className="flex flex-row-reverse justify-between mb-[110px] pr-3 xs:flex-wrap xs:mb-7">
+        <div className="mb-[110px] flex flex-row-reverse justify-between pr-3 xs:mb-7 xs:flex-wrap">
           <div className="max-w-[50%] xs:max-w-full">
             <Image src={about3} alt="" />
-            <h2 className="hidden xs:block relative bottom-[12%] left-[5%] text-white text-[18px]">FLEX DREAM</h2>
+            <h2 className="relative bottom-[12%] left-[5%] hidden text-[18px] text-white xs:block">
+              FLEX DREAM
+            </h2>
           </div>
-          <div className="w-[450px] mx-auto px-3">
-            <h2 className="text-[36px] mb-[21px] sm:text-[18px] xs:hidden">FLEX DREAM</h2>
+          <div className="mx-auto w-[450px] px-3">
+            <h2 className="mb-[21px] text-[36px] sm:text-[18px] xs:hidden">
+              FLEX DREAM
+            </h2>
             <p className="text-[20px] sm:text-[14px] xs:hidden">
               We dream of a world where everyone experiences the liberating
               power of flexibility. Our vision extends beyond the studio walls,
@@ -133,9 +152,11 @@ const About = () => {
               and carrying this newfound vitality into every facet of their
               lives.
             </p>
-            <p className="hidden xs:block text-[14px] mt-[-20px]">
-              We dream of a world where everyone experiences the liberating power of flexibility.
-              We dream of individuals discovering their inherent capacity for growth, both physically and mentally, and carrying this newfound vitality into every facet of their lives.
+            <p className="mt-[-20px] hidden text-[14px] xs:block">
+              We dream of a world where everyone experiences the liberating
+              power of flexibility. We dream of individuals discovering their
+              inherent capacity for growth, both physically and mentally, and
+              carrying this newfound vitality into every facet of their lives.
             </p>
           </div>
         </div>
@@ -148,30 +169,50 @@ const About = () => {
         className="h-[45vw] bg-cover bg-no-repeat"
       ></section>
 
-      <section className="pt-[70px] pb-[100px] xs:py-[30px]">
-        <div className="w-[960px] mx-auto md:max-w-[581px] xs:max-w-[345px] ">
-          <h3 className="text-[64px] font-[800] max-w-[960px] mx-auto mb-[40px] uppercase sm:text-[24px]">FLEX TEAM</h3>
+      <section className="pb-[100px] pt-[70px] xs:py-[30px]">
+        <div className="mx-auto w-[960px] md:max-w-[581px] xs:max-w-[345px] ">
+          <h3 className="mx-auto mb-[40px] max-w-[960px] text-[64px] font-[800] uppercase sm:text-[24px]">
+            FLEX TEAM
+          </h3>
           <PortraitsCollection portraits={portraits} />
         </div>
       </section>
 
-      <section className="bg-black px-[calc((100%-960px)_/_2)] h-[266px] text-[40px] font-[600] text-white md:px-0 xs:h-[96px] xs:px-6 xs:mb-8">
-        <h3 className="text-center pt-11 mb-[30px] xs:mb-3 xs:pt-4 xs:text-[14px]">PARTNERS</h3>
-        <div className="flex justify-between items-center md:justify-around">
+      <section className="h-[266px] bg-black px-[calc((100%-960px)_/_2)] text-[40px] font-[600] text-white md:px-0 xs:mb-8 xs:h-[96px] xs:px-6">
+        <h3 className="mb-[30px] pt-11 text-center xs:mb-3 xs:pt-4 xs:text-[14px]">
+          PARTNERS
+        </h3>
+        <div className="flex items-center justify-between md:justify-around">
           <div className="max-w-[25%]">
-            <Image className="xs:max-h-[18px]" src={partnersGymshark} alt="Gymshark" />
+            <Image
+              className="xs:max-h-[18px]"
+              src={partnersGymshark}
+              alt="Gymshark"
+            />
           </div>
 
           <div className="max-w-[25%]">
-            <Image className="xs:max-h-[18px]" src={partnersPrime} alt="Prime" />
+            <Image
+              className="xs:max-h-[18px]"
+              src={partnersPrime}
+              alt="Prime"
+            />
           </div>
 
           <div className="max-w-[25%]">
-            <Image className="xs:max-h-[18px]" src={partnersMuscletech} alt="Muscletech" />
+            <Image
+              className="xs:max-h-[18px]"
+              src={partnersMuscletech}
+              alt="Muscletech"
+            />
           </div>
 
           <div className="max-w-[25%]">
-            <Image className="xs:max-h-[18px]" src={freshMeals} alt="Fresh Fit Meals" />
+            <Image
+              className="xs:max-h-[18px]"
+              src={freshMeals}
+              alt="Fresh Fit Meals"
+            />
           </div>
         </div>
       </section>

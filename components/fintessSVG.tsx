@@ -2,7 +2,7 @@ import React from "react";
 
 const FintessSVG = ({ filling = "fill" }: { filling?: "stroke" | "fill" }) => {
   return (
-    <div className="w-[482px] flex justify-between">
+    <div className="flex w-[482px] justify-between">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="54"

@@ -6,7 +6,7 @@ const StretchingSVG = ({
   filling?: "stroke" | "fill";
 }) => {
   return filling === "stroke" ? (
-    <div className="w-[772px] flex justify-between">
+    <div className="flex w-[772px] justify-between">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="68"
@@ -129,7 +129,7 @@ const StretchingSVG = ({
       </svg>
     </div>
   ) : (
-    <div className="w-[772px] flex justify-between">
+    <div className="flex w-[772px] justify-between">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="68"
