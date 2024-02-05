@@ -5,43 +5,42 @@
 body {
   min-height: 100%;
   box-sizing: border-box;
-  background: #E7E7E7;
+  background: #e7e7e7;
   font-size: 14px;
   overflow-x: hidden;
 }
 
-.active-nav{
-  background-color: #0D0D0D;
+.active-nav {
+  background-color: #0d0d0d;
   color: white;
   border-radius: 20px;
 }
 
-.home-gallery{
+.home-gallery {
   transition: all 0.4s ease-out;
   width: 75%;
 }
 
-
-.gallery1{
+.gallery1 {
   position: absolute;
   z-index: 11;
   left: 0;
   top: 0;
 }
-.gallery2{
+.gallery2 {
   position: relative;
   z-index: 10;
   left: 75%;
   top: 0;
 }
-.gallery3{
+.gallery3 {
   /* opacity: 0; */
   position: absolute;
   z-index: 0;
   left: 150%;
   top: 0;
 }
-.gallery0{
+.gallery0 {
   /* opacity: 0; */
   position: absolute;
   z-index: 0;

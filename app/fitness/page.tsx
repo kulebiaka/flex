@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const Fitness = ({ some }: any) => {
-  if(some){
-    return <div>dddd</div>
+  if (some) {
+    return <div>dddd</div>;
   }
-}
+};
 
-export default Fitness
+export default Fitness;
