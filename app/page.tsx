@@ -107,7 +107,7 @@ function Home() {
               </div>
               <div className="absolute bottom-[10%] w-full text-center">
                 <button className="h-[58px] w-[233px] rounded-[60px] bg-lime-300 bg-opacity-70 text-[20px] font-semibold uppercase">
-                  <Link href="/stretching">More details</Link>
+                  {/* <Link href="/stretching">More details</Link> */}
                 </button>
               </div>
             </div>
@@ -118,7 +118,7 @@ function Home() {
               </div>
               <div className="absolute bottom-[10%] w-full text-center">
                 <button className="h-[58px] w-[233px] rounded-[60px] bg-[#0D0D0D] bg-opacity-70 text-[20px] font-semibold uppercase text-white">
-                  <Link href="/fitness">More details</Link>
+                  {/* <Link href="/fitness">More details</Link> */}
                 </button>
               </div>
             </div>
