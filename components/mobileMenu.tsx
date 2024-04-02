@@ -4,8 +4,8 @@ import React from "react";
 const links = [
   { to: "/", title: "home" },
   { to: "/about", title: "about us" },
-  { to: "/stretching", title: "stretching" },
-  { to: "/fitness", title: "fitness" },
+  // { to: "/stretching", title: "stretching" },
+  // { to: "/fitness", title: "fitness" },
   { to: "/coaches", title: "coaches" },
   { to: "/contacts", title: "contacts" },
 ];
